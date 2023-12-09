@@ -1,47 +1,59 @@
+import React from 'react';
+
 export default function Loader() {
     return (
         <div className="loader">
-            <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+            <div className="lds-ripple">
+                <div></div>
+                <div></div>
+            </div>
             <style jsx>{`
-                .loader {
-                    height: 100vh;
+             .loader {
+                    width: 100%;
+                    height: 100%;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    background: rgba(0, 0, 0, 0.75);
+                    z-index: 1000;
                 }
-                .lds-ring {
+
+                .lds-ripple {
                     display: inline-block;
                     position: relative;
                     width: 80px;
                     height: 80px;
                 }
-                .lds-ring div {
-                    box-sizing: border-box;
-                    display: block;
+
+                .lds-ripple div {
                     position: absolute;
-                    width: 64px;
-                    height: 64px;
-                    margin: 8px;
-                    border: 8px solid #fff;
+                    border: 4px solid #fff;
+                    opacity: 1;
                     border-radius: 50%;
-                    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-                    border-color: #fff transparent transparent transparent;
+                    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
                 }
-                .lds-ring div:nth-child(1) {
-                    animation-delay: -0.45s;
+
+                .lds-ripple div:nth-child(2) {
+                    animation-delay: -0.5s;
                 }
-                .lds-ring div:nth-child(2) {
-                    animation-delay: -0.3s;
-                }
-                .lds-ring div:nth-child(3) {
-                    animation-delay: -0.15s;
-                }
-                @keyframes lds-ring {
+
+                @keyframes lds-ripple {
                     0% {
-                        transform: rotate(0deg);
+                        top: 36px;
+                        left: 36px;
+                        width: 0;
+                        height: 0;
+                        opacity: 1;
                     }
                     100% {
-                        transform: rotate(360deg);
+                        top: 0px;
+                        left: 0px;
+                        width: 72px;
+                        height: 72px;
+                        opacity: 0;
                     }
                 }
             `}</style>
