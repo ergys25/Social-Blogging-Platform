@@ -8,17 +8,11 @@ export default function Loader() {
                 <div></div>
             </div>
             <style jsx>{`
-             .loader {
-                    width: 100%;
-                    height: 100%;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
+                .loader {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background: rgba(0, 0, 0, 0.75);
-                    z-index: 1000;
+                    height: 100vh;
                 }
 
                 .lds-ripple {
