@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import Loader from '../components/Loader'
 
 export default function Home() {
     return (
@@ -9,9 +10,12 @@ export default function Home() {
                 pathnamea: '/[username]',
                 query: { username: 'Ergys' }
             }}>
-                 Ergys's Profile     
+                     
 
             </Link>
+            <div>
+                <Loader show />
+            </div>
         </div>
     );
     
