@@ -1,5 +1,6 @@
 ## Next.js + Firebase 
 Build a complex webapp inspired by sites Dev.to and Medium, featuring...
+https://social-blogging-platform-o6xk.vercel.app/
 
 - 👨‍🎤 Custom Firebase usernames
 - 📰 Bot-friendly content (SEO)
